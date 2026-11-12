@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theron Medical P.C. — Contact</title>
+<meta name="description" content="Contact Theron Medical P.C.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F2A3D;
+    --teal:#0B6E6D;
+    --ink:#1B2A36;
+    --muted:#3E4C57;
+    --muted2:#4A5763;
+    --muted3:#6B7882;
+    --border:#E2E6E4;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%}
+  body{
+    background:#FFFFFF;color:var(--ink);
+    font-family:Inter, system-ui, -apple-system, sans-serif;
+    font-size:16px;line-height:1.6;
+    min-height:100vh;display:flex;flex-direction:column;
+  }
+  a{color:var(--navy)}
+  a:hover{color:var(--teal)}
+  img{max-width:100%}
+
+  header.site{border-bottom:1px solid var(--border);background:#FFFFFF}
+  header.site .wrap{
+    max-width:1120px;margin:0 auto;padding:18px 24px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;
+  }
+  header.site .logo{display:flex;align-items:center;text-decoration:none}
+  header.site .logo img{height:44px;width:auto;display:block}
+  nav.main{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;font-weight:400}
+  nav.main a{color:var(--ink);text-decoration:none}
+  nav.main a.current{color:var(--teal);font-weight:500}
+
+  main{flex:1 0 auto}
+  main .inner{
+    max-width:760px;margin:0 auto;padding:96px 24px 64px;
+    display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;
+  }
+  h1{
+    margin:0;font-family:Montserrat, Inter, sans-serif;font-weight:400;
+    font-size:30px;letter-spacing:0.04em;color:var(--navy);
+  }
+  .rule{width:48px;height:3px;background:var(--teal)}
+  main p{margin:0;color:var(--muted)}
+  main p.plain{color:var(--ink)}
+
+  footer.site{border-top:1px solid var(--border);background:#FFFFFF}
+  footer.site .inner{
+    max-width:960px;margin:0 auto;padding:40px 24px;
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    text-align:center;font-size:13px;color:var(--muted2);
+  }
+  footer.site img{height:48px;width:auto;display:block}
+  footer.site p{margin:0}
+  .company-toggle{
+    background:none;border:0;padding:4px 8px;font:inherit;font-size:11px;
+    color:var(--muted3);text-decoration:underline;cursor:pointer;
+  }
+  .company-info{
+    max-width:720px;display:none;flex-direction:column;gap:6px;
+    font-size:11px;line-height:1.5;color:var(--muted3);
+  }
+  .company-info.open{display:flex}
+  .company-info p{margin:0}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Theron Medical — Home"><img src="logo.png" alt="Theron Medical"></a>
+    <nav class="main" aria-label="Main menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#areas">Specialties</a>
+      <a href="contact.html" class="current" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="inner">
+    <h1>Contact</h1>
+    <div class="rule"></div>
+    <p>Panepistimiou 44, Athens 10679, Greece</p>
+    <p class="plain">Tel: +30 697 804 0590</p>
+    <p class="plain">Email: <a href="mailto:info@theronmedical.gr">info@theronmedical.gr</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <img src="logo.png" alt="Theron Medical">
+    <p>© 2026 Theron Medical P.C.</p>
+    <button type="button" class="company-toggle" id="companyToggle" aria-expanded="false">Company information</button>
+    <div class="company-info" id="companyInfo">
+      <p>Theron Medical Ι.Κ.Ε. (Theron Medical P.C.) · Private Company</p>
+      <p>Registered office: Panepistimiou 44, Athens 10679, Greece · G.E.MI. No.: 197289201000 · VAT No.: EL803457230 · Tax Office: ΚΕΦΟΔΕ ΑΤΤΙΚΗΣ</p>
+      <p>This website does not use cookies and does not collect personal data. Data requests: info@theronmedical.gr</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('companyToggle');
+  var info = document.getElementById('companyInfo');
+  btn.addEventListener('click', function () {
+    var open = info.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+</body>
+</html>
